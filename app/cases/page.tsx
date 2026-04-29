@@ -1,0 +1,60 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import Reveal from '@/components/Reveal'
+import CaseRail from '@/components/CaseRail'
+import { cases } from '@/content/cases'
+
+export const metadata: Metadata = {
+  title: 'Case Studies',
+  description: 'Selected engagements across aquaculture, regenerative agriculture, marine technology, and international food systems.',
+}
+
+export default function CasesPage() {
+  return (
+    <>
+      {/* Header */}
+      <section className="bg-beige" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+        <div className="container-wide">
+          <Reveal>
+            <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>Selected work</div>
+            <h1 style={{ fontSize: 'clamp(2.75rem, 6vw, 5rem)', maxWidth: 800, marginBottom: '2rem' }}>
+              Engagements that moved the needle.
+            </h1>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="body-l" style={{ maxWidth: 600 }}>
+              Every project listed here involved real regulatory terrain, real capital at stake,
+              and real consequences for getting it wrong. These are the ones we are proud of.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Rail */}
+      <section className="bg-white">
+        <div className="container-wide">
+          <Reveal>
+            <CaseRail cases={cases} />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CTA band */}
+      <section className="bg-beige">
+        <div className="container-text" style={{ textAlign: 'center' }}>
+          <Reveal>
+            <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Work with us</div>
+            <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', marginBottom: '1.5rem' }}>
+              Ready to be the next case study?
+            </h2>
+            <p className="body-l" style={{ marginBottom: '2.5rem', maxWidth: 520, margin: '0 auto 2.5rem' }}>
+              We take on a small number of engagements at a time. If the work sounds right for you,
+              let us talk.
+            </p>
+            <Link href="/contact" className="cta">Start a conversation</Link>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  )
+}
