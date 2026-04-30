@@ -11,16 +11,19 @@ export const metadata: Metadata = {
 
 const recognition = [
   {
+    eyebrow: 'Speaking',
     label: 'Expo 2025 Osaka',
-    body: 'Invited to represent U.S. regenerative food systems and blue economy innovation at one of the world\'s largest international exhibitions, speaking alongside heads of state, researchers, and industry leaders.',
+    body: 'One of the largest international exhibitions in the world, where Bryce represented KSS on climate and food systems alongside heads of state, researchers, and industry leaders.',
   },
   {
+    eyebrow: 'Funding',
     label: '$510K+ secured',
-    body: 'Non-dilutive federal grant capital secured for KSS clients across aquaculture, marine technology, and regenerative agriculture, enabling product development and regulatory work that would otherwise stall.',
+    body: 'Non-dilutive capital secured for clients across aquaculture, agriculture, and marine technology, enabling product development and regulatory work that would otherwise stall.',
   },
   {
+    eyebrow: 'Reach',
     label: 'Three continents',
-    body: 'Active partnerships and engagements across North America, Central America, and Asia, reflecting a practice built for problems that do not stop at borders.',
+    body: 'Active engagements across the United States, Central America, and international partners, reflecting a practice built for problems that do not stop at borders.',
   },
 ]
 
@@ -28,19 +31,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-beige" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+      <section className="bg-beige" style={{ paddingTop: '5rem', paddingBottom: '3rem' }}>
         <div className="container-wide">
           <Reveal>
-            <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>About KSS</div>
-            <h1 style={{ fontSize: 'clamp(2.75rem, 6vw, 5rem)', maxWidth: 840, marginBottom: '2rem' }}>
-              Business that drives progress, not posture.
+            <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>About KSS</div>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', maxWidth: 920, marginBottom: '1.5rem' }}>
+              Sustainability is a competitive advantage. We work like it.
             </h1>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="body-l" style={{ maxWidth: 600 }}>
-              Kuhn Sustainability Solutions is a boutique consultancy helping startups, nonprofits,
-              and farmers grow through tailored strategy, capital alignment, and technical support.
-            </p>
           </Reveal>
         </div>
       </section>
@@ -48,69 +45,52 @@ export default function AboutPage() {
       {/* Bio section */}
       <section className="bg-white">
         <div className="container-wide">
-          <div className="grid-2" style={{ gridTemplateColumns: '0.9fr 1.1fr', gap: '5rem', alignItems: 'center' }}>
-            <ImageReveal style={{ borderRadius: 16 }}>
-              <Image
-                src="/images/bryce-portrait.jpg"
-                alt="Bryce D. Kuhn"
-                width={600}
-                height={630}
-                style={{ width: '100%', height: 'auto', borderRadius: 16, display: 'block', objectFit: 'cover', aspectRatio: '1/1.05' }}
-              />
-            </ImageReveal>
-            <Reveal delay={120}>
-              <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>Bryce D. Kuhn, Founder</div>
-              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', marginBottom: '2rem' }}>
-                A decade at the intersection of food, climate, and capital.
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <p className="body-m">
-                  Bryce D. Kuhn founded KSS on the belief that the companies driving environmental and
-                  economic progress deserve the same quality of strategic support as any Fortune 500.
-                  He has spent over a decade working at the intersection of agriculture, aquaculture,
-                  and climate-focused industry, building expertise across regulatory navigation, capital
-                  strategy, and technical product development.
-                </p>
-                <p className="body-m">
-                  His work spans continents and sectors: securing federal grants for marine technology
-                  companies in Maine, shaping regenerative agriculture hubs in Belize, and representing
-                  U.S. food system innovation on the global stage at Expo 2025 Osaka.
-                </p>
-                <p className="body-m">
-                  Bryce holds deep institutional relationships across university research programs,
-                  federal agencies, and industry coalitions, and brings that network to every
-                  engagement.
-                </p>
+          <div className="grid-2" style={{ gridTemplateColumns: '0.8fr 1.2fr', gap: '5rem', alignItems: 'start' }}>
+            <Reveal>
+              <ImageReveal style={{ borderRadius: 16 }}>
+                <Image
+                  src="/images/bryce-portrait.jpg"
+                  alt="Bryce D. Kuhn"
+                  width={560}
+                  height={700}
+                  style={{ width: '100%', height: 'auto', borderRadius: 16, display: 'block', objectFit: 'cover', aspectRatio: '4/5' }}
+                />
+              </ImageReveal>
+              <div style={{ marginTop: '1.5rem' }}>
+                <div className="eyebrow" style={{ marginBottom: '0.5rem' }}>Founder &amp; CEO</div>
+                <div style={{ fontSize: '1.125rem', fontWeight: 400 }}>Bryce D. Kuhn</div>
               </div>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="bg-beige">
-        <div className="container-wide">
-          <div className="grid-2-3" style={{ alignItems: 'center' }}>
-            <Reveal>
-              <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Our philosophy</div>
-              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '1.5rem' }}>
-                Sustainability is a competitive advantage, not a compliance exercise.
-              </h2>
-            </Reveal>
             <Reveal delay={120}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <p className="body-l">
-                  At KSS, we believe that business should drive economic, social, and environmental
-                  progress. We work with industry pioneers to navigate regulatory landscapes,
-                  manufacture sustainable products, and develop long-term business strategies that
-                  create lasting value.
-                </p>
-                <p className="body-m">
-                  That means we do not sell sustainability as branding. We build the operational
-                  systems, coalitions, and capital strategies that make sustainability a durable
-                  advantage. The companies we work with are not trying to look good. They are trying
-                  to build something that lasts.
-                </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+                <div>
+                  <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Our Foundation</div>
+                  <p className="body-l">
+                    Kuhn Sustainability Solutions was founded by Bryce D. Kuhn, a sustainability strategist
+                    with deep expertise in agriculture, aquaculture, and climate-focused industries. With a
+                    background in business strategy, regulatory consulting, and research and development,
+                    Bryce has worked across sectors to help companies navigate complex challenges, seize new
+                    market opportunities, and build sustainable growth models that last.
+                  </p>
+                </div>
+                <div>
+                  <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Our Philosophy</div>
+                  <p className="body-l">
+                    At KSS, we believe that sustainability is not just a responsibility, it is a competitive
+                    advantage. Strategic consulting is not just about solving problems; it is about empowering
+                    companies to lead, innovate, and thrive in a rapidly evolving market.
+                  </p>
+                </div>
+                <div>
+                  <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Our Impact</div>
+                  <p className="body-l">
+                    Operating at the nexus of policy, innovation, and industry advancement, we enable our
+                    clients to discover new revenue opportunities, broaden their market reach, and drive
+                    significant economic and social development. From securing funding and navigating complex
+                    regulations to pioneering sustainable product development, KSS offers the expertise and
+                    foresight to transform ambition into tangible impact.
+                  </p>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -118,19 +98,22 @@ export default function AboutPage() {
       </section>
 
       {/* Recognition */}
-      <section className="bg-white">
+      <section className="bg-beige">
         <div className="container-wide">
-          <Reveal style={{ marginBottom: '3rem' }}>
-            <div className="eyebrow" style={{ marginBottom: '1rem' }}>Recognition and reach</div>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)' }}>
-              A practice with a track record.
+          <Reveal style={{ marginBottom: '2.5rem' }}>
+            <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Recognition</div>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', maxWidth: 720 }}>
+              Selected speaking and credibility.
             </h2>
           </Reveal>
           <div className="grid-3">
             {recognition.map((r, i) => (
-              <Reveal key={r.label} delay={i * 120}>
-                <div style={{ padding: '2rem', borderTop: '2px solid var(--rule-light)' }}>
-                  <div className="eyebrow" style={{ marginBottom: '0.875rem' }}>{r.label}</div>
+              <Reveal key={r.label} delay={i * 100}>
+                <div className="card" style={{ padding: '2rem', height: '100%' }}>
+                  <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>{r.eyebrow}</div>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '0.75rem', letterSpacing: '-0.015em' }}>
+                    {r.label}
+                  </h3>
                   <p className="body-m">{r.body}</p>
                 </div>
               </Reveal>
@@ -140,7 +123,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-beige">
+      <section className="bg-white">
         <div className="container-text" style={{ textAlign: 'center' }}>
           <Reveal>
             <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Let&apos;s talk</div>

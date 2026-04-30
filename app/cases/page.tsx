@@ -13,18 +13,17 @@ export default function CasesPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-beige" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+      <section className="bg-beige" style={{ paddingTop: '5rem', paddingBottom: '3rem' }}>
         <div className="container-wide">
           <Reveal>
-            <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>Selected work</div>
-            <h1 style={{ fontSize: 'clamp(2.75rem, 6vw, 5rem)', maxWidth: 800, marginBottom: '2rem' }}>
-              Engagements that moved the needle.
+            <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Case studies</div>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', maxWidth: 920, marginBottom: '1.5rem' }}>
+              Work that has moved teams from vision to traction.
             </h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="body-l" style={{ maxWidth: 600 }}>
-              Every project listed here involved real regulatory terrain, real capital at stake,
-              and real consequences for getting it wrong. These are the ones we are proud of.
+            <p className="body-l" style={{ maxWidth: 640 }}>
+              A selection of recent engagements across aquaculture, agriculture, and marine technology.
             </p>
           </Reveal>
         </div>

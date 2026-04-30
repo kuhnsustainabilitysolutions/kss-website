@@ -22,10 +22,9 @@ const partners = [
 ]
 
 const stats = [
-  { value: 510, prefix: '$', suffix: 'K+', label: 'Federal grant capital secured' },
+  { value: 510, prefix: '$', suffix: 'K+', label: 'Non-dilutive funding secured' },
   { value: 10,  prefix: '',  suffix: '+',  label: 'Years across aquaculture, agriculture, and climate' },
   { value: 3,   prefix: '',  suffix: '',   label: 'Continents of active partnerships' },
-  { value: 8,   prefix: '',  suffix: '',   label: 'Institutional partners' },
 ]
 
 function HeroParallax() {
@@ -54,23 +53,23 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={240}>
             <p className="hero-sub">
-              We work at the nexus of policy, innovation, and industry, helping climate and
-              agriculture pioneers turn ambition into measurable impact.
+              A boutique consultancy helping startups, nonprofits, and farmers grow through tailored
+              strategy, capital alignment, and technical support.
             </p>
           </Reveal>
           <Reveal delay={360}>
             <div className="hero-ctas">
               <Link href="/contact" className="cta">Start a conversation</Link>
-              <Link href="/cases" className="cta-ghost-white">Read case studies</Link>
+              <Link href="/services" className="cta-ghost-white">See how we work</Link>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* Stats band */}
-      <section className="bg-beige" style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
+      <section className="bg-white" style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
         <div className="container-wide">
-          <Reveal style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '2rem' }}>
+          <Reveal style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '2rem' }}>
             {stats.map(s => (
               <div key={s.label}>
                 <div className="stat-num">
@@ -84,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* About preview */}
-      <section className="bg-white">
+      <section className="bg-beige">
         <div className="container-wide">
           <div className="grid-2-3" style={{ alignItems: 'center' }}>
             <Reveal>
@@ -109,13 +108,13 @@ export default function HomePage() {
       </section>
 
       {/* Services preview */}
-      <section className="bg-beige">
+      <section className="bg-white">
         <div className="container-wide">
           <Reveal style={{ marginBottom: '3rem' }}>
             <div className="eyebrow" style={{ marginBottom: '1rem' }}>What we do</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem', alignItems: 'end' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', maxWidth: 720 }}>
-                Six practice areas, one boutique team.
+                Strategic and technical support, working in concert.
               </h2>
               <Link href="/services" className="cta-ghost">All services</Link>
             </div>
@@ -127,17 +126,17 @@ export default function HomePage() {
                 <Reveal key={cat} delay={ci * 150}>
                   <Link href="/services" className="card" style={{ padding: '2.25rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                     <div className="eyebrow" style={{ marginBottom: '1rem' }}>{cat}</div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 300, letterSpacing: '-0.015em', marginBottom: '1rem' }}>
+                    <h3 style={{ fontSize: '1.75rem', fontWeight: 300, letterSpacing: '-0.015em', marginBottom: '1rem' }}>
                       {cat === 'Strategic'
-                        ? 'Translating ambition into roadmaps. Funding, regulatory, and go-to-market work.'
-                        : 'Validating, building, and quantifying. Bringing sustainable products from concept to impact.'}
+                        ? 'Translating ambition into roadmaps. Funding, regulatory, and go-to-market work for mission-driven brands.'
+                        : 'Validating, building, and quantifying. Bringing sustainable products from concept to defensible impact.'}
                     </h3>
                     <hr className="rule" style={{ margin: '1.5rem 0' }} />
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
                       {catServices.map(s => (
                         <li key={s.num} style={{ fontSize: '0.9375rem', color: 'var(--ink-2)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.625rem 0', borderBottom: '1px solid var(--rule-light)' }}>
                           <span>{s.title}</span>
-                          <span style={{ color: 'var(--muted-2)', fontFamily: 'ui-monospace, monospace', fontSize: 11 }}>→</span>
+                          <span style={{ color: 'var(--muted)', fontFamily: 'ui-monospace, monospace', fontSize: 11 }}>→</span>
                         </li>
                       ))}
                     </ul>
@@ -150,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* Case studies */}
-      <section className="bg-white">
+      <section className="bg-beige">
         <div className="container-wide">
           <Reveal style={{ marginBottom: '3rem' }}>
             <div className="eyebrow" style={{ marginBottom: '1rem' }}>Selected work</div>
@@ -166,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* Who We Are */}
-      <section className="bg-beige">
+      <section className="bg-white">
         <div className="container-wide">
           <div className="grid-2" style={{ gridTemplateColumns: '0.9fr 1.1fr', gap: '5rem', alignItems: 'center' }}>
             <ImageReveal style={{ borderRadius: 16 }}>
@@ -199,7 +198,7 @@ export default function HomePage() {
       </section>
 
       {/* Partners */}
-      <section className="bg-white" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="bg-beige" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="container-wide">
           <Reveal style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="eyebrow" style={{ marginBottom: '1rem' }}>Partners and collaborators</div>
@@ -220,7 +219,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-beige">
+      <section className="bg-white">
         <div className="container-text" style={{ textAlign: 'center' }}>
           <Reveal>
             <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Let&apos;s talk</div>

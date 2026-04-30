@@ -33,42 +33,49 @@ export default function CaseDetailPage({ params }: Props) {
       <ScrollProgress />
 
       {/* Header */}
-      <section className="bg-beige" style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
+      <section className="bg-beige" style={{ paddingTop: '4rem', paddingBottom: '2.5rem' }}>
         <div className="container-wide">
           <Reveal>
+            <Link href="/cases" className="cta-ghost" style={{ borderBottom: 'none', color: 'var(--muted-2)', fontSize: '0.875rem', marginBottom: '2rem', display: 'inline-flex' }}>
+              ← Case studies
+            </Link>
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
               {c.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', maxWidth: 900, marginBottom: '1.5rem' }}>
-              {c.lede}
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', maxWidth: 920, marginBottom: '1.5rem' }}>
+              {c.name}
             </h1>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="body-l" style={{ maxWidth: 640 }}>{c.teaser}</p>
+            <p className="body-l" style={{ maxWidth: 720 }}>{c.lede}</p>
           </Reveal>
         </div>
       </section>
 
       {/* Hero image */}
-      <div style={{ position: 'relative', aspectRatio: '21/8', overflow: 'hidden', background: 'var(--bg-beige)' }}>
-        <Image
-          src={c.img}
-          alt={c.name}
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          sizes="100vw"
-        />
-      </div>
+      <section className="bg-beige" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="container-wide">
+          <Reveal>
+            <div style={{ position: 'relative', aspectRatio: '16/7', overflow: 'hidden', borderRadius: 16, background: 'var(--ink)' }}>
+              <Image
+                src={c.img}
+                alt={c.name}
+                fill
+                priority
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="100vw"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* Body */}
-      <section className="bg-white">
+      <section className="bg-white" style={{ paddingTop: '4rem' }}>
         <div className="container-wide">
-          <div className="grid-2" style={{ gridTemplateColumns: '280px 1fr', gap: '5rem', alignItems: 'start' }}>
+          <div className="grid-2-3" style={{ gap: '5rem' }}>
 
-            {/* Sidebar meta */}
+            {/* Sidebar meta — sticky */}
             <Reveal>
-              <div className="meta-list">
+              <div className="meta-list" style={{ position: 'sticky', top: '6rem' }}>
                 <div className="item">
                   <div className="label">Client</div>
                   <div className="value">{c.name}</div>
@@ -96,21 +103,23 @@ export default function CaseDetailPage({ params }: Props) {
             </Reveal>
 
             {/* Main content */}
-            <div>
-              {[
-                { label: 'The Challenge', body: c.challenge },
-                { label: 'Our Approach', body: c.solution },
-                { label: 'The Impact', body: c.impact },
-              ].map(({ label, body }, i) => (
-                <Reveal key={label} delay={i * 100} style={{ marginBottom: '2.5rem' }}>
-                  <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>{label}</div>
-                  <p className="body-l">{body}</p>
-                </Reveal>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+              <Reveal>
+                <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>The Challenge</div>
+                <p className="body-l">{c.challenge}</p>
+              </Reveal>
+              <Reveal delay={80}>
+                <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Our Approach</div>
+                <p className="body-l">{c.solution}</p>
+              </Reveal>
+              <Reveal delay={160}>
+                <div className="eyebrow" style={{ marginBottom: '0.75rem', color: 'var(--impact)' }}>The Impact</div>
+                <p className="body-l" style={{ fontSize: '1.25rem' }}>{c.impact}</p>
+              </Reveal>
 
               {/* YouTube embed */}
               {c.youtubeId && (
-                <Reveal delay={300}>
+                <Reveal delay={240}>
                   <div className="eyebrow" style={{ marginBottom: '1rem' }}>Watch the panel</div>
                   <div style={{ position: 'relative', paddingBottom: '56.25%', borderRadius: 16, overflow: 'hidden', background: '#000' }}>
                     <iframe
@@ -132,8 +141,8 @@ export default function CaseDetailPage({ params }: Props) {
       <section className="bg-beige">
         <div className="container-wide">
           <Reveal style={{ marginBottom: '2.5rem' }}>
-            <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Other engagements</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)' }}>More selected work.</h2>
+            <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Continue reading</div>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>Other engagements</h2>
           </Reveal>
           <Reveal delay={100}>
             <CaseRail cases={cases} exclude={c.slug} />

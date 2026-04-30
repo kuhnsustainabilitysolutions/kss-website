@@ -4,20 +4,21 @@
 
 /* ===== KSS Design Tokens (Direction A — Production) ===== */
 :root {
-  --ink:        #1a2329;
-  --ink-2:      #3a4a52;
-  --muted-1:    #4f5860;
-  --muted-2:    #6b7680;
+  --ink:        #1a1a1a;
+  --ink-2:      #2a2a2a;
+  --muted:      #83807e;
+  --muted-1:    #83807e;
+  --muted-2:    #6e6c6a;
   --bg-white:   #ffffff;
-  --bg-beige:   #f4f1ea;
-  --logo-navy:  #1f2d33;
-  --rule-light: #e8e4dc;
-  --rule-med:   #d6d0c4;
-  --rule:       rgba(26,35,41,0.12);
+  --bg-beige:   #cacbc7;
+  --logo-navy:  #2a4856;
+  --rule-light: rgba(26,26,26,0.08);
+  --rule-med:   rgba(26,26,26,0.14);
+  --rule:       rgba(26,26,26,0.12);
   --cta:        #3b82f6;
   --cta-hover:  #1e40af;
-  --impact:     #2d6a4f;
-  --section-py: 6rem;
+  --impact:     #4a6b4a;
+  --section-py: 7rem;
   --container-text: 720px;
   --container-grid: 1080px;
   --container-wide: 1280px;
@@ -102,7 +103,7 @@ section { padding: var(--section-py) 2.5rem; }
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 2.5rem;
-  background: rgba(244,241,234,0.85);
+  background: rgba(202,203,199,0.7);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule-light);
 }
