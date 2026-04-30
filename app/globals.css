@@ -112,7 +112,7 @@ section { padding: var(--section-py) 2.5rem; }
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 2.5rem;
-  background: rgba(202,203,199,0.75);
+  background: rgba(202,203,199,0.5);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule-light);
 }

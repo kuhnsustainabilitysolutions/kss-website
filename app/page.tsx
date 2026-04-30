@@ -49,12 +49,12 @@ export default function HomePage() {
             <Image src="/images/kss-logo-outline.png" alt="KSS" width={240} height={240} className="hero-logo" />
           </Reveal>
           <Reveal delay={120} as="h1">
-            Strategy for the<br />next economy.
+            Strategy for the<br />climate economy.
           </Reveal>
           <Reveal delay={240}>
             <p className="hero-sub">
-              A boutique consultancy helping startups, nonprofits, and farmers grow through tailored
-              strategy, capital alignment, and technical support.
+              We work across policy, innovation, and industry, helping climate-tech and
+              food system operators turn ambition into measurable impact.
             </p>
           </Reveal>
           <Reveal delay={360}>
