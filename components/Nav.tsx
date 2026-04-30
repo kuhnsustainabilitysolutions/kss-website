@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <nav className="nav" aria-label="Main navigation">
       <Link href="/" className="brand">
-        <Image src="/images/kss-logo-filled.png" alt="KSS" width={32} height={32} className="brand-mark" />
+        <Image src="/images/kss-logo-filled.png" alt="KSS" width={40} height={40} className="brand-mark" />
         <span className="brand-name">Kuhn Sustainability Solutions</span>
       </Link>
       <div className="links">

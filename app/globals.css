@@ -4,21 +4,19 @@
 
 /* ===== KSS Design Tokens (Direction A — Production) ===== */
 :root {
-  --ink:        #1a2329;
-  --ink-2:      #3a4a52;
-  --muted:      #4f5860;
-  --muted-1:    #4f5860;
-  --muted-2:    #6b7680;
+  --ink:        #1a1a1a;
+  --ink-2:      #2a2a2a;
+  --muted:      #83807e;
+  --muted-1:    #83807e;
+  --muted-2:    #6e6c6a;
   --bg-white:   #ffffff;
-  --bg-beige:   #f4f1ea;
-  --logo-navy:  #1f2d33;
-  --rule-light: #e8e4dc;
-  --rule-med:   #d6d0c4;
-  --rule:       rgba(26,35,41,0.12);
-  --cta:        #3b82f6;
-  --cta-hover:  #1e40af;
-  --impact:     #2d6a4f;
-  --section-py: 6rem;
+  --bg-beige:   #cacbc7;
+  --logo-navy:  #2a4856;
+  --rule-light: rgba(26,26,26,0.08);
+  --rule-med:   rgba(26,26,26,0.14);
+  --rule:       rgba(26,26,26,0.12);
+  --impact:     #4a6b4a;
+  --section-py: 7rem;
   --container-text: 720px;
   --container-grid: 1080px;
   --container-wide: 1280px;
@@ -76,12 +74,23 @@ section { padding: var(--section-py) 2.5rem; }
 /* ===== Buttons ===== */
 .cta {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--cta); color: white;
+  background: rgba(26,26,26,0.06);
+  color: var(--ink);
+  border: 1px solid rgba(26,26,26,0.18);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   padding: 0.875rem 1.5rem; border-radius: 999px;
   font-size: 0.9375rem; font-weight: 500; letter-spacing: -0.005em;
-  text-decoration: none; transition: background 0.2s ease; border: 0; cursor: pointer;
+  text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; cursor: pointer;
 }
-.cta:hover { background: var(--cta-hover); }
+.cta:hover { background: rgba(26,26,26,0.1); border-color: rgba(26,26,26,0.3); }
+
+/* Hero override — white-translucent glass on dark photo */
+.hero .cta {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.hero .cta:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.6); }
 
 .cta-ghost {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -103,7 +112,7 @@ section { padding: var(--section-py) 2.5rem; }
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 2.5rem;
-  background: rgba(244,241,234,0.85);
+  background: rgba(202,203,199,0.75);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule-light);
 }
@@ -111,7 +120,7 @@ section { padding: var(--section-py) 2.5rem; }
   display: flex; align-items: center; gap: 0.625rem;
   text-decoration: none; color: var(--ink);
 }
-.nav .brand-mark { width: 32px; height: 32px; object-fit: contain; display: block; }
+.nav .brand-mark { width: 40px; height: 40px; object-fit: contain; display: block; }
 .nav .brand-name { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.01em; }
 .nav .links { display: flex; gap: 2.25rem; align-items: center; }
 .nav .links a {
@@ -120,12 +129,15 @@ section { padding: var(--section-py) 2.5rem; }
 }
 .nav .links a:hover, .nav .links a[aria-current="page"] { color: var(--ink); }
 .nav .cta-small {
-  background: var(--cta); color: white;
+  background: rgba(26,26,26,0.06);
+  color: var(--ink);
+  border: 1px solid rgba(26,26,26,0.18);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   padding: 0.5rem 1rem; border-radius: 999px;
   font-size: 0.8125rem; font-weight: 500; text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
-.nav .cta-small:hover { background: var(--cta-hover); }
+.nav .cta-small:hover { background: rgba(26,26,26,0.1); border-color: rgba(26,26,26,0.3); }
 
 /* ===== Footer ===== */
 .footer {
@@ -271,7 +283,7 @@ section { padding: var(--section-py) 2.5rem; }
   position: relative; z-index: 2; color: white; text-align: center; max-width: 960px;
 }
 .hero-logo {
-  width: 96px; height: auto; display: block; margin: 0 auto 2.5rem;
+  width: 240px; height: auto; display: block; margin: 0 auto 2.5rem;
   filter: brightness(0) invert(1); opacity: 0.95;
 }
 .hero h1 {
@@ -387,7 +399,7 @@ section { padding: var(--section-py) 2.5rem; }
   .footer .row { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .partner-logos { grid-template-columns: repeat(2,1fr); }
   .case-card { width: 85%; }
-  .hero-logo { width: 72px; }
+  .hero-logo { width: 160px; }
 }
 
 @media (max-width: 480px) {

@@ -46,7 +46,7 @@ export default function HomePage() {
         <HeroParallax />
         <div className="hero-content">
           <Reveal>
-            <Image src="/images/kss-logo-outline.png" alt="KSS" width={96} height={96} className="hero-logo" />
+            <Image src="/images/kss-logo-outline.png" alt="KSS" width={240} height={240} className="hero-logo" />
           </Reveal>
           <Reveal delay={120} as="h1">
             Strategy for the<br />next economy.
