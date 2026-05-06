@@ -23,7 +23,7 @@ const partners = [
 
 const stats = [
   { value: 510, prefix: '$', suffix: 'K+', label: 'Non-dilutive funding secured' },
-  { value: 10,  prefix: '',  suffix: '+',  label: 'Years across aquaculture, agriculture, and climate' },
+  { value: 10,  prefix: '',  suffix: '+',  label: 'Years across aquaculture, agriculture, and climate-tech' },
   { value: 3,   prefix: '',  suffix: '',   label: 'Continents of active partnerships' },
 ]
 
